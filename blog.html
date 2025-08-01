@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Website</title>
+        <link rel="stylesheet" href="blog.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    </head>
+    <body>
+        <section class="Sub-header">
+            <nav>
+                <a href="index.html">
+                    <img src="eduford_img/logo.jpeg" alt="Janadri's Logo" style="width: 120px;">
+                </a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                     <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="course.html">COURSE</a></li>
+                        <li><a href="blog.html">BLOG</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+          <h1>My Certificates and Online Learning</h1> 
+        
+</section>
+
+<section class="blog-content">
+
+    <div class="row">
+        <div class="blog-left">
+            <img src="eduford_img/certificate.jpg">
+            <h2>My Learning Journey</h2>
+             <p>I have completed several online courses in 2021 to 
+                improve my skills and knowledge. These certificates
+                represent the effort and time I have put into learning.</p>
+           <br>
+           <p>I started with basic web development and learned how to 
+            create simple websites using HTML and CSS. Slowly, I also 
+            explored JavaScript to make pages interactive.</p>
+            <br>
+            <p>Then I explored data science, which helped me understand 
+                how data works. I also tried out Python and worked on 
+                small projects like calculators and quiz apps</p>
+            <br>
+            <p>These courses helped me become more confident in coding 
+                and motivated me to keep learning every day. I’m excited
+                 to keep growing and building new things!</p>
+
+<!-----Comment box--- -->
+
+
+<div class="comment-box">
+       
+     <h3>Leave a Comment</h3>
+
+     <form class="comment-form">
+        <input type="text" placeholder="Enter Name">
+        <input type="email" placeholder="Enter Email">
+        <textarea rows="5" placeholder="Your comment"></textarea>
+        <button type="submit" class="hero-btn red-btn">POST COMMENT</button>
+     </form>
+</div>
+
+
+        </div>
+        <div class="blog-right">
+             <h3>Popular Topics</h3>
+        <div>
+            <span>Web Development</span>
+            <span>21</span>
+        </div>
+        <div>
+            <span>Data science</span>
+            <span>28</span>
+        </div>
+        <div>
+            <span>Machine Learning</span>
+            <span>15</span>
+        </div>
+        <div>
+            <span>Python Projects</span>
+            <span>34</span>
+        </div>
+        <div>
+            <span>AutoCAD Basics</span>
+            <span>42</span>
+        </div>
+        <div>
+            <span>Commerce</span>
+            <span>30</span>
+        </div>
+        </div>
+    </div>
+</section>
+
+
+<!-------  Footer ------>
+
+<section class="footer">
+    <h4>About This Website</h4>
+    <p>This is a beginner-level project made by Janadri. It shows
+     simple HTML structure, links, images, and styling. Thank you 
+     for visiting!</p>
+    <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+    </div>
+    <p>Thanks for <i class="fa fa-heart-o"></i> visiting my site.!</p>
+</section>
+
+
+
+<!-------Javascript for Toggle Menu--------> 
+<script>
+
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+     function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+    </body>
+</html>

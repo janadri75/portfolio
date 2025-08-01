@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Website</title>
+        <link rel="stylesheet" href="couse.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    </head>
+    <body>
+        <section class="Sub-header">
+            <nav>
+                <a href="index.html">
+                    <img src="eduford_img/logo.jpeg" alt="Janadri's Logo" style="width: 120px;">
+                </a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                     <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="course.html">COURSE</a></li>
+                        <li><a href="blog.html">BLOG</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+          <h1>our courses</h1>  
+
+</section>
+
+<!--------Course ------>
+<section class="course">
+    <h1>About Me</h1>
+   <p>Hi! I'm Janadri. I'm currently learning web development. I enjoy coding and want to build creative websites step by step.</p> 
+
+    <div class="row">
+        <div class="course-col">
+            <h3>Intermediate</h3>
+            <p>I completed my intermediate studies and started learning 
+                 how websites work using simple tools and technologies.</p>
+        </div>
+        <div class="course-col">
+            <h3>Degree</h3>
+            <p>I am currently pursuing my degree while exploring HTML,
+                CSS, and building basic web projects as part of my learning.
+                </p>
+        </div>
+        <div class="course-col">
+            <h3>Post Graduation</h3>
+            <p>I plan to continue my education in technology and improve 
+            my web development skills through practical experience.
+        </p>
+        </div>
+    </div>
+
+
+</section>
+
+    
+<!---------Facilities------ -->
+
+
+<!-------  Footer ------>
+
+<section class="footer">
+    <h4>About This Website</h4>
+    <p>This is a beginner-level project made by Janadri. It shows
+     simple HTML structure, links, images, and styling. Thank you 
+     for visiting!</p>
+    <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+    </div>
+    <p>Thanks for <i class="fa fa-heart-o"></i> visiting my site.!</p>
+</section>
+
+
+
+<!-------Javascript for Toggle Menu--------> 
+<script>
+
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+     function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+    </body>
+</html>
