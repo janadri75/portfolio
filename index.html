@@ -1,199 +1,253 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Website</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-    </head>
-    <body>
-        <section class="header">
-            <nav>
-                <a href="index.html">
-                    <img src="eduford_img/logo.jpeg" alt="Janadri's Logo" style="width: 120px;">
-                </a>
-                <div class="nav-links" id="navLinks">
-                    <i class="fa fa-times" onclick="hideMenu()"></i>
-                     <ul>
-                        <li><a href="index.html">HOME</a></li>
-                        <li><a href="about.html">ABOUT</a></li>
-                        <li><a href="course.html">COURSE</a></li>
-                        <li><a href="blog.html">BLOG</a></li>
-                        <li><a href="contact.html">CONTACT</a></li>
-                    </ul>
-                </div>
-                <i class="fa fa-bars" onclick="showMenu()"></i>
-            </nav>
-            
-<div class="text-box">
-    <h1>Welcome to my Website</h1>
-    <p>Creating websites is fun and easier than ever! I'm learning HTML, CSS, and JavaScript to build my own web projects.
-     </p>
-     <a href="" class="hero-btn">Visit Us To Know More</a>
-</div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Janadri Sanapathi — Portfolio</title>
+  <meta name="description" content="Portfolio website of Janadri Sanapathi — aspiring web developer skilled in HTML, CSS, JavaScript, Python, Git/GitHub, and modern AI/Vibe-coded tools." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <style>
+    :root{
+      --bg: #0b0f17;          /* dark indigo */
+      --card: #111827;        /* slate-900 */
+      --muted: #9aa4b2;       /* gray-400 */
+      --text: #e5e7eb;        /* gray-200 */
+      --brand: #60a5fa;       /* blue-400 */
+      --brand-2: #a78bfa;     /* violet-400 */
+      --accent: #34d399;      /* emerald-400 */
+      --ring: rgba(96,165,250,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg,var(--bg),#0a0d14 40%, #0b0f17 100%);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;scroll-behavior:smooth}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
 
-</section>
+    /* Nav */
+    .nav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(12px);background:rgba(11,15,23,.6);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
+    .brand-badge{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:grid;place-items:center;font-weight:800}
+    .brand-badge span{color:#0b0f17}
+    .menu{display:flex;gap:18px;align-items:center}
+    .menu a{opacity:.9;padding:8px 10px;border-radius:10px}
+    .menu a:hover{background:rgba(255,255,255,.06)}
+    .menu .cta{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#0b0f17;font-weight:700}
 
-<!----- About Me ------>
+    /* Hero */
+    .hero{max-width:1100px;margin:0 auto;padding:64px 20px 36px;display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
+    .hero h1{font-size:40px;line-height:1.1;margin:0 0 14px}
+    .hero p{color:var(--muted);margin:0 0 22px}
+    .chiprow{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0}
+    .chip{border:1px solid rgba(255,255,255,.12);padding:6px 10px;border-radius:999px;font-size:13px;color:#cbd5e1;background:rgba(255,255,255,.03)}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04)}
+    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#0b0f17;border-color:transparent}
+    .hero-card{background:linear-gradient(180deg,rgba(96,165,250,.12),rgba(167,139,250,.12));border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:18px}
 
-<section class="course">
-    <h1>About Me</h1>
-   <p>Hi! I'm Janadri. I'm currently learning web development. I enjoy coding and want to build creative websites step by step.</p> 
+    /* Sections */
+    section{max-width:1100px;margin:0 auto;padding:48px 20px}
+    .section-title{font-size:24px;margin:0 0 18px}
+    .muted{color:var(--muted)}
 
-    <div class="row">
-        <div class="course-col">
-            <h3>Intermediate</h3>
-            <p>I completed my intermediate studies and started learning 
-                 how websites work using simple tools and technologies.</p>
-        </div>
-        <div class="course-col">
-            <h3>Degree</h3>
-            <p>I am currently pursuing my degree while exploring HTML,
-                CSS, and building basic web projects as part of my learning.
-                </p>
-        </div>
-        <div class="course-col">
-            <h3>Post Graduation</h3>
-            <p>I plan to continue my education in technology and improve 
-            my web development skills through practical experience.
+    /* Grid cards */
+    .grid{display:grid;gap:16px}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:18px}
+    .card h3{margin:0 0 8px;font-size:18px}
+    .sub{color:#cbd5e1;font-size:13px}
+
+    /* Timeline */
+    .timeline{position:relative;margin:8px 0 0;border-left:2px dashed rgba(255,255,255,.15);padding-left:16px}
+    .tl-item{margin:0 0 16px;position:relative}
+    .tl-item::before{content:"";position:absolute;left:-11px;top:4px;width:10px;height:10px;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--accent));box-shadow:0 0 0 4px var(--ring)}
+
+    /* Footer */
+    footer{padding:36px 20px;border-top:1px solid rgba(255,255,255,.08);background:#0a0d14}
+    .footer-inner{max-width:1100px;margin:0 auto;display:grid;gap:16px;align-items:center;grid-template-columns:1fr auto}
+    .socials{display:flex;gap:12px}
+    .socials a{width:36px;height:36px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.12);border-radius:10px}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid.cols-3{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:640px){
+      .grid.cols-2,.grid.cols-3{grid-template-columns:1fr}
+      .hero h1{font-size:32px}
+      .menu{display:none}
+      .menu-toggle{display:inline-flex}
+    }
+
+    /* Simple toast */
+    .toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:rgba(17,24,39,.96);border:1px solid rgba(255,255,255,.12);padding:10px 14px;border-radius:12px;display:none;gap:8px;align-items:center}
+    .toast.show{display:flex}
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav" aria-label="Primary">
+    <div class="nav-inner">
+      <a class="brand" href="#home" aria-label="Home">
+        <div class="brand-badge" aria-hidden="true"><span>JS</span></div>
+        <span>Janadri&nbsp;Sanapathi</span>
+      </a>
+      <div class="menu">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a class="cta" href="#contact">Contact</a>
+      </div>
+      <button class="btn menu-toggle" aria-label="Open menu" style="display:none" onclick="document.querySelector('.menu').classList.toggle('open')"><i class="fa fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home" class="hero">
+    <div>
+      <h1>Aspiring Web Developer & Problem Solver</h1>
+      <p>Hi, I'm <strong>Janadri</strong>. I build clean, responsive web pages and love learning by doing. I'm comfortable with HTML, CSS, JavaScript, Python, and Git/GitHub — and I experiment with AI-boosted tools like Cursor and VS Code. I also explore no/low-code vibes with Lovable, v0, and Bolt.</p>
+      <div class="chiprow" aria-label="Key skills">
+        <span class="chip">HTML</span>
+        <span class="chip">CSS</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">Python</span>
+        <span class="chip">Git & GitHub</span>
+        <span class="chip">Problem Solving</span>
+        <span class="chip">Communication</span>
+        <span class="chip">Cursor</span>
+        <span class="chip">VS Code</span>
+        <span class="chip">Lovable</span>
+        <span class="chip">v0</span>
+        <span class="chip">Bolt</span>
+      </div>
+      <div class="cta-row">
+        <a class="btn primary" href="#projects"><i class="fa fa-rocket"></i> See Projects</a>
+        <a class="btn" href="#contact"><i class="fa fa-envelope"></i> Contact</a>
+      </div>
+    </div>
+    <aside class="hero-card" aria-label="Quick facts">
+      <h3 style="margin:6px 0 8px">Quick Facts</h3>
+      <ul class="muted" style="margin:0;padding:0 0 0 18px;line-height:1.8">
+        <li>Based in India</li>
+        <li>Learning full‑stack fundamentals</li>
+        <li>Open to internships & entry‑level roles</li>
+      </ul>
+    </aside>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" aria-labelledby="about-title">
+    <h2 id="about-title" class="section-title">About Me</h2>
+    <p class="muted">I'm currently focused on building a solid foundation in web development. I enjoy turning ideas into simple, user‑friendly interfaces and improving every day with projects and practice.</p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" aria-labelledby="skills-title">
+    <h2 id="skills-title" class="section-title">Skills</h2>
+    <div class="grid cols-3">
+      <div class="card"><h3>Frontend</h3><p class="muted">HTML, CSS, JavaScript</p></div>
+      <div class="card"><h3>Programming</h3><p class="muted">Python (basics to scripts)</p></div>
+      <div class="card"><h3>Version Control</h3><p class="muted">Git, GitHub</p></div>
+      <div class="card"><h3>AI‑Powered Tools</h3><p class="muted">Cursor, VS Code</p></div>
+      <div class="card"><h3>Vibe‑Coded Tools</h3><p class="muted">Lovable, v0, Bolt</p></div>
+      <div class="card"><h3>Core Strengths</h3><p class="muted">Strong problem‑solving, good communication</p></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" aria-labelledby="projects-title">
+    <h2 id="projects-title" class="section-title">Projects</h2>
+    <p class="muted" style="margin-top:-6px">A few simple, learning‑focused builds. I iterate fast and keep code readable.</p>
+    <div class="grid cols-3" style="margin-top:12px">
+      <article class="card">
+        <h3>Personal Portfolio</h3>
+        <p class="muted">Responsive one‑page site (this page!) built with semantic HTML/CSS and a pinch of JS for interactions.</p>
+        <p class="sub">Stack: HTML, CSS, JS</p>
+        <p style="margin-top:8px"><a href="#" onclick="copyLink(event)" class="btn" title="Copy site URL"><i class="fa fa-link"></i> Copy URL</a></p>
+      </article>
+      <article class="card">
+        <h3>File Organizer Script</h3>
+        <p class="muted">Small Python script that sorts files into folders by type — helpful for tidying downloads.</p>
+        <p class="sub">Stack: Python</p>
+        <p style="margin-top:8px"><a target="_blank" rel="noopener" href="https://github.com/your-username/file-organizer" class="btn"><i class="fa fa-github"></i> View on GitHub</a></p>
+      </article>
+      <article class="card">
+        <h3>Starter Components</h3>
+        <p class="muted">Tiny library of copy‑paste frontend components made while learning — buttons, cards, navbars.</p>
+        <p class="sub">Stack: HTML, CSS</p>
+        <p style="margin-top:8px"><a target="_blank" rel="noopener" href="https://github.com/your-username/starter-components" class="btn"><i class="fa fa-github"></i> View on GitHub</a></p>
+      </article>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" aria-labelledby="edu-title">
+    <h2 id="edu-title" class="section-title">Education</h2>
+    <div class="timeline" aria-label="Education timeline">
+      <div class="tl-item">
+        <h3>Intermediate (12th) — <span class="sub">Completed in 2023</span></h3>
+        <p class="muted" style="margin:6px 0 0">Focused on foundational sciences and mathematics; started exploring web technologies.</p>
+      </div>
+      <div class="tl-item">
+        <h3>SSC (10th) — <span class="sub">Completed in 2021</span></h3>
+        <p class="muted" style="margin:6px 0 0">Built curiosity in problem‑solving and computers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title" class="section-title">Contact</h2>
+    <div class="grid cols-2">
+      <div class="card">
+        <h3>Get in touch</h3>
+        <p class="muted">Email is best. I'm open to internships, junior roles, and collaboration.</p>
+        <p style="margin:10px 0 0"><a class="btn primary" href="mailto:janadrisanapathi@gmail.com"><i class="fa fa-envelope"></i> janadrisanapathi@gmail.com</a></p>
+      </div>
+      <div class="card">
+        <h3>Profiles</h3>
+        <p class="muted">Links you can check for code and updates.</p>
+        <p style="display:flex;flex-wrap:wrap;gap:10px;margin-top:10px">
+          <a class="btn" target="_blank" rel="noopener" href="https://github.com/your-username"><i class="fa fa-github"></i> GitHub</a>
+          <a class="btn" target="_blank" rel="noopener" href="https://www.linkedin.com/in/your-username"><i class="fa fa-linkedin"></i> LinkedIn</a>
         </p>
-        </div>
+      </div>
     </div>
+  </section>
 
-
-</section>
-
-<!------My projects------>
-
-<section class="campus">
-    <h1>My Projects</h1>
-    <p>Here are a few sample projects I'm working on as part of my learning journey. More coming soon!</p> 
-
-    <div class="row">
-        <div class="campus-col">
-            <img src="eduford_img/london.png">
-            <div class="layer"></div>
-                <h3>LONDON</h3>
-        </div>
-        <div class="campus-col">
-            <img src="eduford_img/newyork.png">
-            <div class="layer"></div>
-                <h3>NEW YORK</h3>
-           </div>
-           <div class="campus-col">
-               <img src="eduford_img/washington.png">
-               <div class="layer"></div>
-                  <h3>WASHINGTON</h3>
-        </div>
+  <footer>
+    <div class="footer-inner">
+      <small class="muted">© <span id="year"></span> Janadri Sanapathi. Built with ❤️ and vanilla HTML/CSS/JS.</small>
+      <div class="socials" aria-label="Social links">
+        <a aria-label="GitHub" target="_blank" rel="noopener" href="https://github.com/your-username"><i class="fa fa-github"></i></a>
+        <a aria-label="LinkedIn" target="_blank" rel="noopener" href="https://www.linkedin.com/in/your-username"><i class="fa fa-linkedin"></i></a>
+        <a aria-label="Email" href="mailto:janadrisanapathi@gmail.com"><i class="fa fa-envelope"></i></a>
+      </div>
     </div>
-    
-</section>
+  </footer>
 
-<!---- ----- Contact Me--------->
+  <div class="toast" id="toast"><i class="fa fa-check"></i><span>Link copied to clipboard</span></div>
 
-<section class="Facilities">
-    <h1>Email: janadri@example.com</h1>
-    <p>If you'd like to connect with me or see more of my work, feel free to send me an email or visit my GitHub.</p> 
+  <script>
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-   <div class="row">
-       <div class="Facilities-col">
-           <img src="eduford_img/library.png">
-           <h3>World Class Library</h3>
-           <pI>I love reading and learning new things online. I often read blogs and tutorials to improve my skills.</p>
-       </div>
-       <div class="Facilities-col">
-           <img src="eduford_img/basketball.png">
-           <h3>Largest Play Ground</h3>
-           <p>When I'm not coding, I enjoy sports and spending time with friends. Balance is important for growth.</p>
-       </div>
-       <div class="Facilities-col">
-           <img src="eduford_img/cafeteria.png">
-           <h3>Tasty and Healthy Food</h3>
-           <p>I also enjoy trying different foods! A happy mind needs good food and some coding energy!</p>
-       </div>
-   </div>
-
-
-</section>
-
-
-<!------ testimonials ------>
-
-<section class="testimonials">
-    <h1>What People Say</h1>
-    <p>Here are a few comments from friends and classmates who encouraged me in my web learning journey.</p> 
-
-<div class="row">
-    <div class="testionial-col">
-        <img src="eduford_img/user1.jpg">
-        <div>
-            <p>This website is really helpful for beginners. The content is easy to understand, and I liked the simple design.</p>
-            <h3>Sneha Reddy</h3>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-o"></i>
-        </div>
-    </div>
-    <div class="testionial-col">
-        <img src="eduford_img/user2.jpg">
-        <div>
-            <p>I learned how to build my own site after seeing this one. Great job Janadri, it's inspiring to see your progress!</p>
-            <h3>Arun Kumar</h3>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-o"></i>
-        </div>
-    </div>
-</div>
-
-</section>
-
-<!-------- Call To Action ------>
-
-<section class="cta">
-    <h1>Want to Learn Together? <br>Anywhere From The 
-        World</h1>
-        <p>Let’s connect and share knowledge. You can explore more
-         about web development from anywhere in the world.</p>
-        <a href="" class="hero-btn">CONTACT US</a>
-</section>
-
-
-
-<!-------  Footer ------>
-
-<section class="footer">
-    <h4>About This Website</h4>
-    <p>This is a beginner-level project made by Janadri. It shows
-     simple HTML structure, links, images, and styling. Thank you 
-     for visiting!</p>
-    <div class="icons">
-        <i class="fa fa-facebook"></i>
-        <i class="fa fa-twitter"></i>
-        <i class="fa fa-instagram"></i>
-        <i class="fa fa-linkedin"></i>
-    </div>
-    <p>Thanks for <i class="fa fa-heart-o"></i> visiting my site.!</p>
-</section>
-
-
-
-<!-------Javascript for Toggle Menu--------> 
-<script>
-
-    var navLinks = document.getElementById("navLinks");
-
-    function showMenu(){
-        navLinks.style.right = "0";
+    // Copy current page URL (as deployed) — replace with your domain when hosted
+    function copyLink(e){
+      e.preventDefault();
+      const url = window.location.href;
+      navigator.clipboard.writeText(url).then(()=>{
+        const t = document.getElementById('toast');
+        t.classList.add('show');
+        setTimeout(()=>t.classList.remove('show'),1300);
+      });
     }
-     function hideMenu(){
-        navLinks.style.right = "-200px";
-    }
-
-</script>
-    </body>
+  </script>
+</body>
 </html>
